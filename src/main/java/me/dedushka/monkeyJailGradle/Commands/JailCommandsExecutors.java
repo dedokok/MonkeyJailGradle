@@ -430,7 +430,7 @@ public class JailCommandsExecutors {
                 jailProcess.angle2.y = jailProcess.angle1.y;
             }
             jailProcess.blocks.clear();
-            if(getJailBlocks(jailProcess)==1)return 0;
+            if(getJailBlocks(jailProcess)==-1)return 0;
             if(jailProcess.isShow) {
                 hideJailBorder(player, jailProcess.jail_name);
                 showJailBorder(jailProcess, player);
@@ -577,7 +577,7 @@ public class JailCommandsExecutors {
             player.sendMessage("§cОшибка. Начните создание/редактирование тюрьмы");
             return 0;
         }
-        if(jailProcess.jail_name !=null && jailProcess.world!=null && jailProcess.blocks.isEmpty() && jailProcess.spawnBlock!=null){
+        if(jailProcess.jail_name !=null && jailProcess.world!=null && !jailProcess.blocks.isEmpty() && jailProcess.spawnBlock!=null){
             jailProcess.creatorName=player.getName();
             if(JailLogic.jails.containsKey(jailProcess.jail_name)) {
                 player.sendRichMessage("<red>Такая тюрьма уже существует!");
@@ -592,6 +592,7 @@ public class JailCommandsExecutors {
             return 1;
         }
         else{
+            //getLogger().info("Прошёл в ошибки")
             if(jailProcess.world==null){
                 player.sendMessage("§cОшибка. Не указан мир");
             }
@@ -603,7 +604,6 @@ public class JailCommandsExecutors {
             }
             if(jailProcess.jail_name==null){
                 player.sendMessage("§cОшибка. Нет имени тюрьмы");
-
             }
             return 0;
         }
