@@ -1,0 +1,46 @@
+name: MonkeyJail
+version: 'R0.1-SNAPSHOT'
+main: me.dedushka.monkeyJailGradle.MonkeyJailGradle
+api-version: '1.21.11'
+canvas-supported: true
+softdepend:
+  - SkinsRestorer
+depend: [DiscordSRV]
+
+permissions:
+  monkeyjail.admin:
+    description: admin permission.
+    default: op
+  monkeyjail.jail:
+    description: jail player.
+    default: op
+    monkeyjail.unjail:
+      description: jail player.
+      default: op
+  monkeyjail.createjail:
+    description: create jail commands.
+    default: op
+  monkeyjail.deleteJail:
+    description: delete jail.
+    default: op
+  monkeyjail.fuck:
+    description: throw monkey to frick machine.
+    default: true
+  monkeyjail.editjail:
+    description: edit jail.
+    default: op
+  monkeyjail.tpjail:
+    description: tp to jail.
+    default: op
+  monkeyjail.showjail:
+    description: show jail.
+    default: op
+  monkeyjail.time:
+    description: show time left
+    default: true
+  monkeyjail.timeanotherplayer:
+    description: show another monkey time left
+    default: op
+  monkeyjail.reload:
+    description: reload plugin
+    default: op

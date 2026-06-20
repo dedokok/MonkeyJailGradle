@@ -1,0 +1,16 @@
+globalTimerDelay: 1 #задержка повтора глобального таймера(все нижние значения умножаются на него)
+timeInShreakingMachine: 200 #сколько времени длится траходром
+doEveryLoopDelay: 4 #время проверки положения обезьяны и её времени. Чем меньше, тем больше нагрузка
+quietMonkeyTickIncrease: 12000 #сколько обезьяне прибавляется времени за выход из игры во время траходрома
+shreakTimerDelay: 20 #как часто обновляется таймер на траходроме (дефолт 1 секунда)
+updateMonkeysTimeDelay: 1200 #как часто обновляется время у обезьян в базе данных (дефолт: 1200(1 минута))
+#нужно, чтобы при накапливании globalTimerDelay результат был кратен doEveryLoopDelay, shreakTimerDelay и updateMonkeysTimeDelay
+
+trahodromName: trahodrom #название мира траходрома
+
+fuckMonkeyDistance: 10 #с какого расстояния от обезьяны игрок может использовать команду /fuck (если -1, то с любого)
+
+defaultMonkeySkinURL: "http://textures.minecraft.net/texture/af20e8affb49949274a61ad7cf3da9f83026abad7e184d184109ff86785bb6f5" #ссылка на дефолтный скин обезьян
+
+history_discord_channel_id: "xxx" #айди канала для истории наказаний
+
